@@ -1,1 +1,8 @@
 # wind-predictor
+In competitive sailing, it is very important to understand wind conditions for the future so that competitors can prepare properly. The difficulty in this is that weather is often erratic, and not predicting it accurately can cost sailors injury or broken equipment. Additionally, competitors who understand how wind conditions will evolve throughout the day will have the upper hand over those who enter the day naively. In this project, I will build a program in Python that will predict the hourly wind conditions for the next five hours at a specified location using a linear regression model.
+# MVP Scope
+For the MVP, the regression model will be built upon historical weather data scraped from the Open-Meteo API in a Bash script. Then, that data will be input into a Python script that will generate the linear regression model. That model will then be used to make predictions, and those predictions will be output to the user in the terminal. Finally, the predictions will be tested for the model's error.
+# Future Plans
+In the future, I plan to create a GUI to facilitate choosing the location and reading the predictions since the MVP uses latitude and longitude to determine location. Additionally, I would like to test other regression models, such as random forest regression. Finally, I would like to compare the predictions made by my models with other forecast models.
+# Tech Stack
+I will be using `curl` and `jq` to grab quantitative wind speed and direction data from the Open-Meteo API. I will be using Python's NumPy and pandas to store and parse data, and I will be using scikit-learn to create a regression model that can predict hourly wind conditions over a five-hour time period.
